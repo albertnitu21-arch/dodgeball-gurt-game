@@ -1,0 +1,16 @@
+{
+  "name": "midnight-dodgeball",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chaotic free-for-all dodgeball for up to 5 friends in the browser.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "8.18.0"
+  }
+}
