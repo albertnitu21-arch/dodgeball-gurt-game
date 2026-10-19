@@ -11,7 +11,9 @@ const TICK_HZ = 30;      // simulation rate
 const SEND_HZ = 20;      // state broadcast rate
 const MAX_ROOM = 12;     // people allowed in one room (5 play, the rest watch)
 
-const INDEX = path.join(__dirname, 'public', 'index.html');
+// index.html can live in public/ or next to this file (handy when uploading through GitHub's website).
+const INDEX = [path.join(__dirname, 'public', 'index.html'), path.join(__dirname, 'index.html')]
+  .find(p => fs.existsSync(p)) || path.join(__dirname, 'public', 'index.html');
 
 const server = http.createServer((req, res) => {
   const url = (req.url || '/').split('?')[0];
